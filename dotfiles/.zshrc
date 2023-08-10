@@ -10,7 +10,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+export ZSH_DISABLE_COMPFIX=true
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -101,7 +101,10 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias vim='vim'
+ alias nvidia-enable="sudo mv /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf.dis /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf"
+ alias nvidia-disable="sudo mv /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf.dis"  
+ alias peaclock="peaclock --config-dir ~/.config/peaclock"
+ alias konda="source /opt/anaconda/bin/activate root"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
