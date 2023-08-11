@@ -27,7 +27,7 @@ shadow-offset-y = -7;
 
 # Red color value of shadow (0.0 - 1.0, defaults to 0).
 # shadow-red = 0
-shadow-transparent = true;
+
 # Green color value of shadow (0.0 - 1.0, defaults to 0).
 # shadow-green = 0
 
@@ -159,10 +159,9 @@ rounded-corners-exclude = [
 
 blur:
 {
- method="gaussian";
+ method="box";
  size=10;
- strenght=10;
- deviation=8.0;
+ deviation=5.0;
 };
 # Parameters for background blurring, see the *BLUR* section for more information.
 # blur-method = gaussian
@@ -229,7 +228,7 @@ backend = "glx";
 
 # Enable/disable VSync.
 # vsync = false
-vsync = false;
+vsync = true;
 
 # Enable remote control via D-Bus. See the *D-BUS API* section below for more details.
 # dbus = false
@@ -438,30 +437,3 @@ wintypes:
   popup_menu = { opacity = 0.8; }
   dropdown_menu = { opacity = 0.8; }
 };
-#enable or disable animations
-animations = true;
-#change animation speed of windows in current tag e.g open window in current tag
-animation-stiffness-in-tag = 125;
-#change animation speed of windows when tag changes
-animation-stiffness-tag-change = 90.0;
-
-animation-window-mass = 0.4;
-animation-dampening = 15;
-animation-clamping = true;
-
-#open windows
-animation-for-open-window = "zoom";
-#minimize or close windows
-animation-for-unmap-window = "squeeze";
-#popup windows
-animation-for-transient-window = "slide-up"; #available options: slide-up, slide-down, slide-left, slide-right, squeeze, squeeze-bottom, zoom
-
-#set animation for windows being transitioned out while changings tags
-animation-for-prev-tag = "minimize";
-#enables fading for windows being transitioned out while changings tags
-enable-fading-prev-tag = true;
-
-#set animation for windows being transitioned in while changings tags
-animation-for-next-tag = "slide-in-center";
-#enables fading for windows being transitioned in while changings tags
-enable-fading-next-tag = true;

@@ -84,6 +84,7 @@ keys = [
     Key([], "XF86AudioNext", lazy.spawn("playerctl next"), desc="Skip to next"),
     Key([], "XF86AudioPrev", lazy.spawn("playerctl previous"), desc="Skip to previous"), 
     Key([], "Print",lazy.spawn(["sh", "-c", "maim -s | tee >(xclip -selection clipboard -t image/png) > ~/Pictures/$(date +%s).png"]), desc="Take screenshot copy and save"),
+    Key([mod],"e",lazy.spawn("nemo"),desc="Launch file explorer"),
 ]
 
 groups = [Group(i) for i in ["","󰓇","󰈙","󰏪","󰙯","","󰊗","󰗃",""]]
@@ -113,9 +114,15 @@ for i in range(len(groups)):
         ]
     )
 
+colors = ["#322D31",  # main color
+          "#787276",  # secondary color
+          "#000000",  # background
+          ]
+
+
 layouts = [
-    layout.Columns(border_focus="#c77dff",border_normal="#5a189a", border_width=2,margin=4),
-    layout.Max(),
+    layout.Columns(border_focus=colors[1], border_normal=colors[0], border_width=2, margin=4),
+    # layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -136,16 +143,19 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-colors = ["#0077B4","#B576B5","#0B1727"]
-
 screens = [
     Screen(
         top=bar.Bar(
             [
                # widget.CurrentLayout(),
                 
-                widget.GroupBox(background=colors[0],highlight_method="block",borderwidth=6),
-                 widget.Sep(
+                widget.GroupBox(background=colors[0],
+                                highlight_method="block",
+                                borderwidth=6,
+                                disable_drag=True,
+                                fontsize=14,
+                                ),
+                widget.Sep(
                     padding=4,
                     linewidth=0,
                     background=colors[0],
@@ -165,7 +175,7 @@ screens = [
                 # widget.StatusNotifier(),
 
                 widget.TextBox(text='\ue0be',fontsize='43',padding=0,background=None,foreground=colors[0]),
-                widget.Pomodoro(color_inactive="FFFFFF",background=colors[0]),
+                widget.Pomodoro(color_inactive="FFFFFF", color_active="#0D793F", background=colors[0]),
                 #Diagonal separator
                 widget.Sep(
                     padding=4,

@@ -4,3 +4,4 @@ firefox &
 discord &
 spotify &
 caffeine &
+cerebro &
