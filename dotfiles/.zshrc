@@ -5,8 +5,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export BW_SESSION="yaforizYZPnZweRj5hxLlEN2Tvw3SF4A0wQORkooRsTE5n6x1N5qW9Xca49s6C4dEaTiS4gLvyXfJJNZ/DxPIQ=="
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+export GTK_FILE_CHOOSER_DIALOG=nemo
+
+export PATH=/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -87,12 +93,8 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+#  Preferred editor for local and remote sessions
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -101,13 +103,38 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
- alias nvidia-enable="sudo mv /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf.dis /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf"
- alias nvidia-disable="sudo mv /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf.dis"  
+ alias konda="source /home/leo/miniforge3/bin/activate"	 
  alias peaclock="peaclock --config-dir ~/.config/peaclock"
- alias konda="source /opt/anaconda/bin/activate root"
+ alias goOneDrive="cd ~/Documents/OneDrive/Sexto\ Semestre" 
+ alias jlab="konda;nohup jupyter-lab &"
+ alias vim="nvim"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 setopt no_histverify
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/leo/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/leo/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/leo/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/leo/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/home/leo/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/home/leo/miniforge3/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
