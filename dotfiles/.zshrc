@@ -13,7 +13,7 @@ export BW_SESSION="yaforizYZPnZweRj5hxLlEN2Tvw3SF4A0wQORkooRsTE5n6x1N5qW9Xca49s6
 export GTK_FILE_CHOOSER_DIALOG=nemo
 
 export PATH=/bin:$PATH
-
+export PATH=/home/leo/.local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_DISABLE_COMPFIX=true
@@ -87,7 +87,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -108,6 +107,13 @@ export EDITOR='nvim'
  alias goOneDrive="cd ~/Documents/OneDrive/Sexto\ Semestre" 
  alias jlab="konda;nohup jupyter-lab &"
  alias vim="nvim"
+ alias ls="lsd"
+ alias l='ls -l'
+ alias la='ls -a'
+ alias lla='ls -la'
+ alias lt='ls --tree'
+ alias sl='sl -Ga'
+ alias cat='bat'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -138,3 +144,5 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+setopt autocd
+eval "$(zoxide init zsh --cmd cd)"
