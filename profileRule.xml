@@ -1,0 +1,153 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.Management.Infrastructure.CimInstance#root/standardcimv2/MSFT_NetFirewallRule</T>
+      <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/standardcimv2/CIM_PolicyRule</T>
+      <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/standardcimv2/CIM_PolicySet</T>
+      <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/standardcimv2/CIM_Policy</T>
+      <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/standardcimv2/CIM_ManagedElement</T>
+      <T>Microsoft.Management.Infrastructure.CimInstance#MSFT_NetFirewallRule</T>
+      <T>Microsoft.Management.Infrastructure.CimInstance#CIM_PolicyRule</T>
+      <T>Microsoft.Management.Infrastructure.CimInstance#CIM_PolicySet</T>
+      <T>Microsoft.Management.Infrastructure.CimInstance#CIM_Policy</T>
+      <T>Microsoft.Management.Infrastructure.CimInstance#CIM_ManagedElement</T>
+      <T>Microsoft.Management.Infrastructure.CimInstance</T>
+      <T>System.Object</T>
+    </TN>
+    <ToString>MSFT_NetFirewallRule (CreationClassName = "MSFT?FW?FirewallRule?{84777B4F-F8A4-428..., PolicyRuleName = "", SystemCreationClassName = "", SystemName = "")</ToString>
+    <Props>
+      <Nil N="Caption" />
+      <Nil N="Description" />
+      <S N="ElementName">CustomOpenVpnOracle</S>
+      <S N="InstanceID">{84777B4F-F8A4-4288-8971-9908839222DE}</S>
+      <Nil N="CommonName" />
+      <Nil N="PolicyKeywords" />
+      <U16 N="Enabled">1</U16>
+      <U16 N="PolicyDecisionStrategy">2</U16>
+      <Nil N="PolicyRoles" />
+      <U16 N="ConditionListType">3</U16>
+      <S N="CreationClassName">MSFT|FW|FirewallRule|{84777B4F-F8A4-4288-8971-9908839222DE}</S>
+      <U16 N="ExecutionStrategy">2</U16>
+      <Nil N="Mandatory" />
+      <S N="PolicyRuleName"></S>
+      <Nil N="Priority" />
+      <Nil N="RuleUsage" />
+      <U16 N="SequencedActions">3</U16>
+      <S N="SystemCreationClassName"></S>
+      <S N="SystemName"></S>
+      <U16 N="Action">2</U16>
+      <U16 N="Direction">1</U16>
+      <Nil N="DisplayGroup" />
+      <S N="DisplayName">CustomOpenVpnOracle</S>
+      <U16 N="EdgeTraversalPolicy">0</U16>
+      <Obj N="EnforcementStatus" RefId="1">
+        <TN RefId="1">
+          <T>System.UInt16[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <U16>0</U16>
+        </LST>
+      </Obj>
+      <B N="LocalOnlyMapping">false</B>
+      <B N="LooseSourceMapping">false</B>
+      <Nil N="Owner" />
+      <Nil N="PackageFamilyName" />
+      <Obj N="Platforms" RefId="2">
+        <TN RefId="2">
+          <T>System.String[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST />
+      </Obj>
+      <Nil N="PolicyAppId" />
+      <S N="PolicyStoreSource">PersistentStore</S>
+      <U16 N="PolicyStoreSourceType">1</U16>
+      <U16 N="PrimaryStatus">1</U16>
+      <U16 N="Profiles">0</U16>
+      <Obj N="RemoteDynamicKeywordAddresses" RefId="3">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <Nil N="RuleGroup" />
+      <S N="Status">The rule was parsed successfully from the store.</S>
+      <U32 N="StatusCode">65536</U32>
+      <Nil N="PSComputerName" />
+    </Props>
+    <MS>
+      <Obj N="__ClassMetadata" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.ArrayList</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <Obj RefId="5">
+            <MS>
+              <S N="ClassName">CIM_ManagedElement</S>
+              <S N="Namespace">ROOT/standardcimv2</S>
+              <S N="ServerName">EL-PODEROSO</S>
+              <I32 N="Hash">971820712</I32>
+              <S N="MiXml">&lt;CLASS NAME="CIM_ManagedElement"&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::CoreElements&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="Caption" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;64&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Description" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ElementName" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InstanceID" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;/CLASS&gt;</S>
+            </MS>
+          </Obj>
+          <Obj RefId="6">
+            <MS>
+              <S N="ClassName">CIM_Policy</S>
+              <S N="Namespace">ROOT/standardcimv2</S>
+              <S N="ServerName">EL-PODEROSO</S>
+              <I32 N="Hash">971824872</I32>
+              <S N="MiXml">&lt;CLASS NAME="CIM_Policy" SUPERCLASS="CIM_ManagedElement"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Policy&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="CommonName" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="PolicyKeywords" TYPE="string"&gt;&lt;/PROPERTY.ARRAY&gt;&lt;/CLASS&gt;</S>
+            </MS>
+          </Obj>
+          <Obj RefId="7">
+            <MS>
+              <S N="ClassName">CIM_PolicySet</S>
+              <S N="Namespace">ROOT/standardcimv2</S>
+              <S N="ServerName">EL-PODEROSO</S>
+              <I32 N="Hash">971825912</I32>
+              <S N="MiXml">&lt;CLASS NAME="CIM_PolicySet" SUPERCLASS="CIM_Policy"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Policy&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="Enabled" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="PolicyDecisionStrategy" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="PolicyRoles" TYPE="string"&gt;&lt;QUALIFIER NAME="Deprecated" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_PolicySetInRoleCollection&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY.ARRAY&gt;&lt;/CLASS&gt;</S>
+            </MS>
+          </Obj>
+          <Obj RefId="8">
+            <MS>
+              <S N="ClassName">CIM_PolicyRule</S>
+              <S N="Namespace">ROOT/standardcimv2</S>
+              <S N="ServerName">EL-PODEROSO</S>
+              <I32 N="Hash">971823832</I32>
+              <S N="MiXml">&lt;CLASS NAME="CIM_PolicyRule" SUPERCLASS="CIM_PolicySet"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Policy&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="ConditionListType" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="CreationClassName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ExecutionStrategy" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Mandatory" TYPE="boolean"&gt;&lt;QUALIFIER NAME="Deprecated" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;No Value&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="PolicyRuleName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Priority" TYPE="uint16"&gt;&lt;QUALIFIER NAME="Deprecated" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_PolicySetComponent.Priority&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="RuleUsage" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="SequencedActions" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="SystemCreationClassName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Propagated" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;CIM_System.CreationClassName&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="SystemName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Propagated" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;CIM_System.Name&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;/CLASS&gt;</S>
+            </MS>
+          </Obj>
+          <Obj RefId="9">
+            <MS>
+              <S N="ClassName">MSFT_NetFirewallRule</S>
+              <S N="Namespace">root/standardcimv2</S>
+              <S N="ServerName">EL-PODEROSO</S>
+              <I32 N="Hash">974975992</I32>
+              <S N="MiXml">&lt;CLASS NAME="MSFT_NetFirewallRule" SUPERCLASS="CIM_PolicyRule"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Policy&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;1.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;wfascim&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="Caption" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;64&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;Caption&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Description" TYPE="string"&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;Description&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ElementName" TYPE="string"&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;ElementName&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InstanceID" TYPE="string"&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;InstanceID&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="CommonName" TYPE="string"&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;CommonName&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="PolicyKeywords" TYPE="string"&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;PolicyKeywords&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY.ARRAY&gt;&lt;PROPERTY NAME="Enabled" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;Enabled&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="PolicyDecisionStrategy" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;PolicyDecisionStrategy&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="PolicyRoles" TYPE="string"&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;PolicyRoles&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY.ARRAY&gt;&lt;PROPERTY NAME="ConditionListType" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;ConditionListType&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="CreationClassName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;CreationClassName&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ExecutionStrategy" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;ExecutionStrategy&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Mandatory" TYPE="boolean"&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;Mandatory&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="PolicyRuleName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;PolicyRuleName&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Priority" TYPE="uint16"&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;Priority&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="RuleUsage" TYPE="string"&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;RuleUsage&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="SequencedActions" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;SequencedActions&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="SystemCreationClassName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Propagated" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;CIM_System.CreationClassName&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;SystemCreationClassName&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="SystemName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Propagated" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;CIM_System.Name&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;SystemName&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Action" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Direction" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="DisplayGroup" TYPE="string"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="DisplayName" TYPE="string"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="EdgeTraversalPolicy" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="EnforcementStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;13&lt;/VALUE&gt;&lt;VALUE&gt;14&lt;/VALUE&gt;&lt;VALUE&gt;15&lt;/VALUE&gt;&lt;VALUE&gt;16&lt;/VALUE&gt;&lt;VALUE&gt;17&lt;/VALUE&gt;&lt;VALUE&gt;18&lt;/VALUE&gt;&lt;VALUE&gt;19&lt;/VALUE&gt;&lt;VALUE&gt;20&lt;/VALUE&gt;&lt;VALUE&gt;21&lt;/VALUE&gt;&lt;VALUE&gt;22&lt;/VALUE&gt;&lt;VALUE&gt;23&lt;/VALUE&gt;&lt;VALUE&gt;24&lt;/VALUE&gt;&lt;VALUE&gt;25&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY.ARRAY&gt;&lt;PROPERTY NAME="LocalOnlyMapping" TYPE="boolean"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="LooseSourceMapping" TYPE="boolean"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Owner" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="PackageFamilyName" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="Platforms" TYPE="string"&gt;&lt;/PROPERTY.ARRAY&gt;&lt;PROPERTY NAME="PolicyAppId" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="PolicyStoreSource" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="PolicyStoreSourceType" TYPE="uint16"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="PrimaryStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;0x8000..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Profiles" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;0x4&lt;/VALUE&gt;&lt;VALUE&gt;0x2&lt;/VALUE&gt;&lt;VALUE&gt;0x1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="RemoteDynamicKeywordAddresses" TYPE="string"&gt;&lt;/PROPERTY.ARRAY&gt;&lt;PROPERTY NAME="RuleGroup" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Status" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="StatusCode" TYPE="uint32"&gt;&lt;/PROPERTY&gt;&lt;METHOD NAME="Enable" TYPE="uint32"&gt;&lt;QUALIFIER NAME="implemented" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/METHOD&gt;&lt;METHOD NAME="Disable" TYPE="uint32"&gt;&lt;QUALIFIER NAME="implemented" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/METHOD&gt;&lt;METHOD NAME="Rename" TYPE="uint32"&gt;&lt;QUALIFIER NAME="implemented" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PARAMETER NAME="NewName" TYPE="string"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;/METHOD&gt;&lt;METHOD NAME="CloneObject" TYPE="uint32"&gt;&lt;QUALIFIER NAME="implemented" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PARAMETER NAME="NewGPOSession" TYPE="string"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="NewName" TYPE="string"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="NewPolicyStore" TYPE="string"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;/METHOD&gt;&lt;METHOD NAME="EnumerateFull" TYPE="uint32"&gt;&lt;QUALIFIER NAME="implemented" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="static" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PARAMETER.ARRAY NAME="Dependents" TYPE="string"&gt;&lt;QUALIFIER NAME="EmbeddedInstance" TYPE="string"&gt;&lt;VALUE&gt;CIM_ManagedSystemElement&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Out" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Stream" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER.ARRAY&gt;&lt;/METHOD&gt;&lt;/CLASS&gt;</S>
+            </MS>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="Name">{84777B4F-F8A4-4288-8971-9908839222DE}</S>
+      <S N="ID">{84777B4F-F8A4-4288-8971-9908839222DE}</S>
+      <S N="DisplayName">CustomOpenVpnOracle</S>
+      <Nil N="Group" />
+      <S N="Enabled">True</S>
+      <S N="Profile">Any</S>
+      <Obj N="Platform" RefId="10">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="Direction">Inbound</S>
+      <S N="Action">Allow</S>
+      <S N="EdgeTraversalPolicy">Block</S>
+      <B N="LSM">false</B>
+      <S N="PrimaryStatus">OK</S>
+      <S N="Status">The rule was parsed successfully from the store. (65536)</S>
+      <S N="EnforcementStatus">NotApplicable</S>
+      <S N="PolicyStoreSourceType">Local</S>
+    </MS>
+  </Obj>
+</Objs>
