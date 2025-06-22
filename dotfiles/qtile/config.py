@@ -28,25 +28,32 @@ from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
-import subprocess,os
+import subprocess
+import os
 mod = "mod4"
 terminal = guess_terminal()
-
 keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
+    Key([mod], 'period', lazy.next_screen(), desc='Next monitor'),
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
-    Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
-    Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
+    Key([mod], "k", lazy.layout.down(), desc="Move focus down"),
+    Key([mod], "j", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
-    Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
-    Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
+    Key([mod, "shift"], "h", lazy.layout.swap_left(), desc="Move window to the left"),
+    Key([mod, "shift"], "l", lazy.layout.swap_right(), desc="Move window to the right"),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
+    # Grow, shrink, normalize and maximize for monadTall
+    Key([mod], "i", lazy.layout.grow()),
+    Key([mod], "m", lazy.layout.shrink()),
+    Key([mod], "n", lazy.layout.normalize()),
+    Key([mod], "o", lazy.layout.maximize()),
+    Key([mod, "shift"], "space", lazy.layout.flip()),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
     Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
@@ -72,22 +79,27 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     
+    Key([mod], "v", lazy.spawn('rofi-copyq'), desc="Spawn a command using a prompt widget"),
+    
     #media and brightness control
-    Key([], 'XF86MonBrightnessUp',   lazy.spawn('brightnessctl set +10%')),
-    Key([], 'XF86MonBrightnessDown', lazy.spawn('brightnessctl set 10%-')),
+    Key([], 'XF86MonBrightnessUp',   lazy.spawn('volume_brightness.sh brightness_up')),
+    Key([], 'XF86MonBrightnessDown', lazy.spawn('volume_brightness.sh brightness_down')),
 
+    Key([], 'Caps_Lock', lazy.spawn('capsLock.sh'), desc="CapsLock indicator"),
     # Audio
-    Key([], 'XF86AudioMute', lazy.spawn('volumeControl.sh mute')),
-    Key([], 'XF86AudioRaiseVolume', lazy.spawn('volumeControl.sh up')),
-    Key([], 'XF86AudioLowerVolume', lazy.spawn('volumeControl.sh down')),
-    Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause"), desc="Play/Pause player"),
-    Key([], "XF86AudioNext", lazy.spawn("playerctl next"), desc="Skip to next"),
-    Key([], "XF86AudioPrev", lazy.spawn("playerctl previous"), desc="Skip to previous"), 
+    Key([], 'XF86AudioMute', lazy.spawn('volume_brightness.sh volume_mute')),
+    Key([], 'XF86AudioRaiseVolume', lazy.spawn('volume_brightness.sh volume_up')),
+    Key([], 'XF86AudioLowerVolume', lazy.spawn('volume_brightness.sh volume_down')),
+    Key([], "XF86AudioPlay", lazy.spawn("volume_brightness.sh play_pause"), desc="Play/Pause player"),
+    Key([], "XF86AudioNext", lazy.spawn("volume_brightness.sh next_track"), desc="Skip to next"),
+    Key([], "XF86AudioPrev", lazy.spawn("volume_brightness.sh prev_track"), desc="Skip to previous"), 
     Key([], "Print",lazy.spawn(["sh", "-c", "maim -s | tee >(xclip -selection clipboard -t image/png) > ~/Pictures/$(date +%s).png"]), desc="Take screenshot copy and save"),
-    Key([mod],"e",lazy.spawn("nemo"),desc="Launch file explorer"),
+    Key([mod], "e", lazy.spawn("nemo"), desc="Launch file explorer"),
+    Key([mod,"control"],"t", lazy.spawn("normcap")),
+    Key([mod], "f", lazy.window.toggle_floating()),
 ]
 
-groups = [Group(i) for i in ["","󰓇","󰈙","󰏪","󰙯","","󰊗","󰗃",""]]
+groups = [Group(i) for i in ["","󰓇","󰀴","󰈙","󰙯","󰏪","󰇮","󰗃",""]]
 
 for i in range(len(groups)):
     currentGroup = groups[i]
@@ -114,20 +126,22 @@ for i in range(len(groups)):
         ]
     )
 
-colors = ["#322D31",  # main color
-          "#787276",  # secondary color
-          "#000000",  # background
+colors = ["#161D47",  # main color
+          "#274C77",  # secondary color
+          "#274C77",  # background
+          "#FFFFFF",  # foreground
+          "#274C77",  # inactive color
           ]
 
 
 layouts = [
-    layout.Columns(border_focus=colors[1], border_normal=colors[0], border_width=2, margin=4),
+    layout.MonadTall(border_focus=colors[0], border_normal="#000000", border_width=2, margin=4),
     # layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    # layout.MonadTall(),
+    # layout.Columns(),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
@@ -137,7 +151,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="FiraCode Nerd Font",
+    font="SF Pro",
     fontsize=12,
     padding=3,
 )
@@ -154,6 +168,8 @@ screens = [
                                 borderwidth=6,
                                 disable_drag=True,
                                 fontsize=14,
+                                inactive=colors[4],
+                                font="Fira Code Nerd Font",
                                 ),
                 widget.Sep(
                     padding=4,
@@ -164,7 +180,7 @@ screens = [
 
 
                 widget.Prompt(),
-                widget.WindowName(),
+                widget.WindowName(font="SF Pro", foreground=colors[3]),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
@@ -173,8 +189,9 @@ screens = [
                 ),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
+                widget.TextBox(text='\ue0be',fontsize='43',padding=0,background=colors[2],foreground=colors[0]),
 
-                widget.TextBox(text='\ue0be',fontsize='43',padding=0,background=None,foreground=colors[0]),
+
                 widget.Pomodoro(color_inactive="FFFFFF", color_active="#0D793F", background=colors[0]),
                 #Diagonal separator
                 widget.Sep(
@@ -184,9 +201,11 @@ screens = [
                 ),
                 widget.TextBox(text='\ue0be',fontsize='43',padding=0,background=colors[0],foreground=colors[1]),
 
-                #CapsLock
-                widget.CapsNumLockIndicator(background=colors[1]),
-                #Diagonal separator
+                #Battery              
+                widget.BatteryIcon(background=colors[1],theme_path='/home/leo/.config/qtile/batIcons2'),
+                widget.Battery(format="{percent:2.0%}",background=colors[1],**widget_defaults,),
+
+                 #Diagonal separator
                 widget.Sep(
                     padding=4,
                     linewidth=0,
@@ -194,10 +213,8 @@ screens = [
                 ),
                 widget.TextBox(text='\ue0be',fontsize='43',padding=0,background=colors[1],foreground=colors[0]),
 
-                #Battery              
-                widget.Battery(format="{percent:2.0%}",background=colors[0],**widget_defaults,),
-                widget.BatteryIcon(background=colors[0],),
 
+                widget.PulseVolume(fmt='Vol: {}',background=colors[0]),
                  #Diagonal separator
                 widget.Sep(
                     padding=4,
@@ -207,29 +224,19 @@ screens = [
                 widget.TextBox(text='\ue0be',fontsize='43',padding=0,background=colors[0],foreground=colors[1]),
 
 
-                widget.PulseVolume(fmt='Vol: {}',background=colors[1]),
-                 #Diagonal separator
-                widget.Sep(
-                    padding=4,
-                    linewidth=0,
-                    background=colors[1],
-                ),
-                widget.TextBox(text='\ue0be',fontsize='43',padding=0,background=colors[1],foreground=colors[0]),
-
-
-                widget.Net(background=colors[0]),
+                widget.Net(background=colors[1]),
                   #Diagonal separator
-                widget.TextBox(text='\ue0be',fontsize='43',padding=0,background=colors[0],foreground=colors[1]),
+                widget.TextBox(text='\ue0be',fontsize='43',padding=0,background=colors[1],foreground=colors[0]),
 
 
                 
-                widget.Systray(background=colors[1]),
+                widget.Systray(background=colors[0]),
 
-                widget.TextBox(text='\ue0be',fontsize='43',padding=0,background=colors[1],foreground=colors[0]),
+                widget.TextBox(text='\ue0be',fontsize='43',padding=0,background=colors[0],foreground=colors[1]),
 
 
 
-                widget.Clock(format="%Y-%m-%d %I:%M %p",background=colors[0]),
+                widget.Clock(format="%Y-%m-%d %I:%M %p",background=colors[1]),
             ],
             24,
             background=colors[2],
@@ -252,6 +259,9 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
+    border_width=0,
+    border_focus="#000000",
+    border_normal="#000000",
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
@@ -261,7 +271,8 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
-    ]
+        Match(title="Ulauncher Preferences"), 
+]
 )
 auto_fullscreen = True
 focus_on_window_activation = "smart"
@@ -269,7 +280,7 @@ reconfigure_screens = True
 
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
-auto_minimize = True
+auto_minimize = False 
 
 # When using the Wayland backend, this can be used to configure input devices.
 wl_input_rules = None
@@ -290,8 +301,11 @@ def client_new(client):
         client.togroup("󰓇")
     if "notion" in client.name.lower():
         client.togroup("󰈙")
+    if "thunderbird" in client.name.lower():
+        client.togroup("󰇮")
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser("~/.config/qtile/autostart.sh")
     subprocess.call([home])
+
 
